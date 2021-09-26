@@ -1,3 +1,3 @@
 module.exports = {
-    url: 'mongodb://localhost:27017/bicicleta'
+    url: 'mongodb+srv://bicicletas:pI3cJj9hXC@cluster0.4rxom.mongodb.net/myFirstDatabase?retryWrites=true&w=majority'
 }
