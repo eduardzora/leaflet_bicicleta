@@ -1,0 +1,28 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: map
+  labels:
+    app: map
+    version: "1.0"
+spec:
+  selector:
+    matchLabels:
+      app: map
+  replicas: 2
+  template:
+    metadata:
+      labels:
+        app: map
+        version: "1.0"
+    spec:
+      containers:
+        - name: map
+          image: icr.io/eduzora/map:v1
+          resources:
+            requests:
+              cpu: 100m
+              memory: 100Mi
+          ports:
+            - name: http
+              containerPort: 5000
